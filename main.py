@@ -31,7 +31,7 @@ def main():
         "order": "published_at",
         "direction": "asc",
     }
-    custom_ca_path=config_file["custom_ca_path"]
+    custom_ca_path = config_file["custom_ca_path"]
     api_endpoint = base_url + api_url + api_entries
 
     # API call:
@@ -70,7 +70,7 @@ def main():
                 )
 
                 # Logging config:
-                log_path=config_file["log_path"]
+                log_path = config_file["log_path"]
                 logging.basicConfig(
                     level=logging.INFO,
                     format="%(asctime)s - [%(levelname)s] - %(message)s",
@@ -83,7 +83,7 @@ def main():
 
                 # Log output:
                 logging.info(
-                        "%s - %s - %s - Matched '%s' - %s",
+                    "%s - %s - %s - Matched '%s' - %s",
                     entry_id,
                     entry_published_at,
                     entry_feed_title,
