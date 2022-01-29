@@ -70,11 +70,12 @@ def main():
                 )
 
                 # Logging config:
+                log_path=config_file["log_path"]
                 logging.basicConfig(
                     level=logging.INFO,
                     format="%(asctime)s - [%(levelname)s] - %(message)s",
                     handlers=[
-                        logging.FileHandler("blocked.log"),
+                        logging.FileHandler(f"{log_path}/blocked.log"),
                         logging.StreamHandler(),
                     ],
                     datefmt="%Y-%m-%d %H:%M:%S",
