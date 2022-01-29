@@ -33,5 +33,9 @@ Currently, matches are all case insensitive, and use the below regex, which does
 
 ## Logging
 
-When the script finds a match it will output a log entry to a file in the same directory named `blocked.log`.
+When the script finds a match it will output a log entry to a file in the same directory named `blocked.log` as below.
 
+```log
+2022-01-29 16:01:02 - [INFO] - 7749 - 2022-01-28T16:16:00Z - Slashdot - Matched 'apple' - Samsung Led Smartphone Shipments For 2021, Beating Out Apple
+2022-01-29 16:01:02 - [INFO] - 7781 - 2022-01-28T19:19:00Z - Slashdot - Matched 'apple' - Apple Finally Removing Python 2 In macOS 12.3
+```
