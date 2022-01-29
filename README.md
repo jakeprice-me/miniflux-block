@@ -21,8 +21,10 @@ miniflux_api_token: <api-token-value>
 miniflux_base_url: https://<path-to-miniflux-instance>
 custom_ca_path: <path-to-custom-ca-file>
 blocklist:
-  - words
-  - phrases to block
+  - lorem
+  - ipsum
+  - dolor
+  - sit amet
 ```
 
 ## Regular Expression Matching
