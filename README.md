@@ -1,6 +1,6 @@
 # Miniflux Block
 
-A simple enough Python script to connect to a Miniflux instance via the API and set to "read" any feed entries that match words or phrases in a blocklist. 
+A simple enough Python script to connect to a Miniflux instance via the [API](https://miniflux.app/docs/api.html) and set to "read" any feed entries that match words or phrases in a blocklist. 
 
 Miniflux's own solution to this problem, and other solutions I have found allow you to specify a blocklist on a per feed basis, which is annoying to maintain. This script allows you to set one blocklist for all feeds instead.
 
