@@ -4,7 +4,11 @@ A simple enough Python script to connect to a Miniflux instance via the API and 
 
 ## Usage
 
-Run the script at regular intervals via a cron job. 
+Run the script at regular intervals via a cron job. I have it running every 5 minutes on my home server.
+
+```sh
+*/5 * * * * /usr/bin/python3 <path-to-script>
+```
 
 ## Configuration File
 
