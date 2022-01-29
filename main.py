@@ -54,7 +54,7 @@ def main():
         for word in config_file["blocklist"]:
 
             # Check against title only:
-            blocklist_match = re.search(rf"({word})", entry_title, re.IGNORECASE)
+            blocklist_match = re.search(rf"(\b{word}\b)", entry_title, re.IGNORECASE)
 
             if blocklist_match:
 
@@ -82,7 +82,7 @@ def main():
 
                 # Log output:
                 logging.info(
-                    "%s - %s - %s - %s - %s",
+                        "%s - %s - %s - Matched '%s' - %s",
                     entry_id,
                     entry_published_at,
                     entry_feed_title,
