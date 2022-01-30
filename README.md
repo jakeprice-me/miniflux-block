@@ -1,8 +1,8 @@
 # Miniflux Block
 
-A simple enough Python script to connect to a Miniflux instance via the [API](https://miniflux.app/docs/api.html) and set to "read" any feed entries that match words or phrases in a blocklist. 
+A simple enough Python script to connect to a Miniflux instance via the [API](https://miniflux.app/docs/api.html) and set to "read" any feed entries that match words or phrases in a blocklist. It aims to be an effective way to cut the 99% endless stream of rubbish some feeds contain, and retain the 1% I actually want to know about.
 
-Miniflux's own solution to this problem, and other solutions I have found allow you to specify a blocklist on a per feed basis, which is annoying to maintain. This script allows you to set one blocklist for all feeds instead.
+Miniflux's own solution to this problem, and other solutions I have found allow you to specify a blocklist on a per feed basis, which is annoying to maintain. This script allows you to set _one_ blocklist to apply to _all_ feeds instead.
 
 ## Usage
 
@@ -16,12 +16,9 @@ Run the script at regular intervals via a cron job. I have it running every 5 mi
 
 You must create a file named `config.yml`, which should contain values for the following keys.
 
-**Note:** The script is currently set to use a custom certificate authority as I host Miniflux locally. To use the script without a custom CA, remove all references to `verify=custom_ca_path` (there should currently be two lines).
-
 ```yaml
 miniflux_api_token: <api-token-value>
 miniflux_base_url: https://<path-to-miniflux-instance>
-custom_ca_path: <path-to-custom-ca-file>
 log_path: <path-to-log-directory>
 blocklist:
   - lorem
