@@ -31,14 +31,12 @@ def main():
         "order": "published_at",
         "direction": "asc",
     }
-    custom_ca_path = config_file["custom_ca_path"]
     api_endpoint = base_url + api_url + api_entries
 
     # API call:
     entries = requests.get(
         api_endpoint,
         params=api_entries_params,
-        verify=custom_ca_path,
         headers={"X-Auth-Token": auth_token},
     )
 
@@ -62,7 +60,6 @@ def main():
                 requests.put(
                     api_endpoint,
                     data=json.dumps({"entry_ids": [entry_id], "status": "read"}),
-                    verify=custom_ca_path,
                     headers={
                         "X-Auth-Token": auth_token,
                         "Content-Type": "application/json",
