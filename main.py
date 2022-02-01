@@ -28,6 +28,7 @@ def main():
     api_entries = "/entries"
     api_entries_params = {
         "status": "unread",
+        "limit": config_file["miniflux_entries_limit"],
         "order": "published_at",
         "direction": "asc",
     }
