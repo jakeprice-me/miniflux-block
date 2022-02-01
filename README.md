@@ -19,12 +19,16 @@ You must create a file named `config.yml`, which should contain values for the f
 ```yaml
 miniflux_api_token: <api-token-value>
 miniflux_base_url: https://<path-to-miniflux-instance>
+miniflux_entries_limit: <max-number-of-entries> # Default is 100. Set to something high like 10000.
 log_path: <path-to-log-directory>
 blocklist:
   - lorem
   - ipsum
   - dolor
   - sit amet
+  - consectetur
+  - adipiscing elit
+  - sed do
 ```
 
 ## Regular Expression Matching
