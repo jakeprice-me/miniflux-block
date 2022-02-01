@@ -1,0 +1,15 @@
+miniflux_api_token: 
+miniflux_base_url: https://
+# Set to the number of entries you want to return and filter on. Defaults to 100 (a Miniflux default). Make sure this number is higher than your average number of unread entries otherwise you'll just be running the script on the same entries each time the script runs (and you won't actually be filtering new entries at all).
+miniflux_entries_limit: 10000
+log_path: 
+# Add words and phrases to the blocklist below:
+blocklist:
+  - lorem
+  - ipsum
+  - dolor
+  - sit amet
+  - consectetur
+  - adipiscing elit
+  - sed do
+

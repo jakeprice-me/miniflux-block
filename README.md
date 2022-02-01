@@ -14,7 +14,7 @@ Run the script at regular intervals via a cron job. I have it running every 5 mi
 
 ## Configuration File
 
-You must create a file named `config.yml`, which should contain values for the following keys.
+You must create a file named `config.yml` which contains the key/values below. A commented example file named `config_template.yml` is also provided in the repository.
 
 ```yaml
 miniflux_api_token: <api-token-value>
