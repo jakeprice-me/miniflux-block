@@ -29,7 +29,7 @@ def main():
     api_entries_params = {
         "status": "unread",
         "limit": config_file["miniflux_entries_limit"],
-        "order": "published_at",
+        "order": "id",
         "direction": "asc",
     }
     api_endpoint = base_url + api_url + api_entries
