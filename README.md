@@ -9,7 +9,7 @@ Miniflux's own solution to this problem, and other solutions I have found allow 
 Run the script at regular intervals via a cron job. I have it running every 5 minutes on my home server.
 
 ```sh
-*/5 * * * * /usr/bin/python3 <path-to-script>
+*/5 * * * * cd miniflux-block/ && /usr/bin/python3 miniflux-block/main.py
 ```
 
 ## Configuration File
