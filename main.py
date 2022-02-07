@@ -50,10 +50,10 @@ def main():
         entry_published_at = entry["published_at"]
         entry_feed_title = entry["feed"]["title"]
 
-        for word in config_file["blocklist"]:
+        for word in config_file["blocklist_regex"]:
 
             # Check against title only:
-            blocklist_match = re.search(rf"(\b{word}\b)", entry_title, re.IGNORECASE)
+            blocklist_match = re.search(rf"{word}", entry_title, re.IGNORECASE)
 
             if blocklist_match:
 
