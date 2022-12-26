@@ -6,6 +6,7 @@ import re
 import logging
 import json
 import requests
+import sys
 import yaml
 
 
@@ -68,14 +69,10 @@ def main():
                 )
 
                 # Logging config:
-                log_path = config_file["log_path"]
                 logging.basicConfig(
                     level=logging.INFO,
+                    stream=sys.stdout,
                     format="%(asctime)s - [%(levelname)s] - %(message)s",
-                    handlers=[
-                        logging.FileHandler(f"{log_path}/blocked.log"),
-                        logging.StreamHandler(),
-                    ],
                     datefmt="%Y-%m-%d %H:%M:%S",
                 )
 

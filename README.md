@@ -20,7 +20,6 @@ You must create a file named `config.yml` which contains the key/values below. A
 miniflux_api_token: <api-token-value>
 miniflux_base_url: https://<path-to-miniflux-instance>
 miniflux_entries_limit: <max-number-of-entries> # Default is 100. Set to something high like 10000.
-log_path: <path-to-log-directory>
 blocklist_regex:
   - \$\d+
   - \b(\% off)\b
@@ -36,7 +35,7 @@ You can supply a list of regular expressions that you want the script to "mark a
 
 ## Logging
 
-When the script finds a match it will output a log entry to a file in the same directory named `blocked.log` as below.
+When the script finds a match it will output to standard output (`stdout`). If you wish to keep a log, you should redirect `stdout`.
 
 ```log
 2022-01-29 16:01:02 - [INFO] - 7749 - 2022-01-28T16:16:00Z - Slashdot - Matched 'apple' - Samsung Led Smartphone Shipments For 2021, Beating Out Apple
